@@ -1,0 +1,5 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
+    "python.defaultInterpreterPath": "/home/iarrien-/goinfre/students/iarrien-/.venv/bin/python",
+    "cmake.sourceDirectory": "/home/iarrien-/Desktop/Proyectos/MyGit/Rag/Resources/vllm-0.10.1"
+}
