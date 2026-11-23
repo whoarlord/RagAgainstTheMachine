@@ -3,6 +3,7 @@ class CLI:
         pass
 
     def search(self, query: str, k: int):
+        print(f"query: {query}")
         pass
 
     def search_dataset(self, dataset_path: str, k: int, save_directory: str):
