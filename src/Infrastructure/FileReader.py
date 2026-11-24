@@ -20,3 +20,10 @@ class FileReader:
             raise FileNotFoundError(f"The file doesn't exist: {file_path}")
 
         return path.read_text(encoding="utf-8", errors="replace")
+
+    def list_files(self) -> list[str]:
+        root = self.folder_path
+        out = []
+        for pattern in ("vllm-0.10.1/**/*.md", "vllm-0.10.1/**/*.py"):
+            out += [str(p.relative_to(root)) for p in root.glob(pattern) if p.is_file()]
+        return sorted(out)
