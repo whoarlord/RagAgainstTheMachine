@@ -1,15 +1,15 @@
-from src.Infrastructure import IndexerFactory
+from src.Infrastructure import IndexerFactory, SearcherFactory
 
 class CLI:
     def index(self, max_chunk_size: int):
         factory = IndexerFactory()
         indexer = factory.createIndexer()
         indexer.process_files(max_chunk_size)
-        pass
 
     def search(self, query: str, k: int):
-        print(f"query: {query}")
-        pass
+        factory = SearcherFactory()
+        searcher = factory.create()
+        searcher.search(query, k)
 
     def search_dataset(self, dataset_path: str, k: int, save_directory: str):
         pass

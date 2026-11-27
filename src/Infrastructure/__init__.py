@@ -1,5 +1,5 @@
-from .FileReader import FileReader
-from .FileSaver import FileSaver
-from .IndexerFactory import IndexerFactory
+from .FileParser import FileParser
+from .Factory.IndexerFactory import IndexerFactory
+from .Factory.SearcherFactory import SearcherFactory
 
-__all__ = ['FileReader', 'FileSaver', 'IndexerFactory']
+__all__ = ['FileParser', 'IndexerFactory', 'SearcherFactory']
